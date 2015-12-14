@@ -7,7 +7,9 @@
   "main": "js/reveal.js",
   "scripts": {
     "test": "grunt test",
-    "start": "grunt serve"
+    "start": "node plugin/notes-server",
+    "serve": "grunt serve",
+	"package": "grunt package"
   },
   "author": {
     "name": "Hakim El Hattab",
@@ -40,6 +42,6 @@
     "grunt": "~0.4.5",
     "node-sass": "~3.3.3"
   },
-  
+
   "license": "MIT"
 }
