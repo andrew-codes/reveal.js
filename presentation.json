@@ -1,0 +1,14 @@
+{
+  "author": "Andrew Smith",
+  "description": "",
+  "twitter": {
+	"username": "@andrew_codes"
+  },
+  "slides": [
+	"test"
+  ],
+  "theme": {
+	"main": "black",
+	"syntax": "github-gist"
+  }
+}

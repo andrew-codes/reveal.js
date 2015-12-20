@@ -129,10 +129,28 @@ module.exports = function(grunt) {
 				tasks: 'css-core'
 			},
 			html: {
-				files: [ 'index.html']
+				files: ['index.mustache'],
+				tasks: 'html'
 			},
 			markdown: {
-				files: [ './*.md' ]
+				files: ['./slides/*.md']
+			},
+			slides: {
+				files: ['./presentation.json'],
+				tasks: ['html']
+			}
+		},
+
+		mustacheGenerate: {
+			options: {
+				globalData: './presentation.json',
+				ouptut: '.html'
+			},
+			files: {
+				expand: true,
+				cwd: './',
+				src: './*.mustache',
+				dest: './'
 			}
 		}
 
@@ -148,9 +166,11 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks( 'grunt-contrib-connect' );
 	grunt.loadNpmTasks( 'grunt-autoprefixer' );
 	grunt.loadNpmTasks( 'grunt-zip' );
+	grunt.loadNpmTasks('grunt-mustache-generate');
 
 	// Default task
 	grunt.registerTask( 'default', [ 'css', 'js' ] );
+	grunt.registerTask('default', ['html', 'css', 'js']);
 
 	// JS task
 	grunt.registerTask( 'js', [ 'jshint', 'uglify', 'qunit' ] );
@@ -172,5 +192,6 @@ module.exports = function(grunt) {
 
 	// Run tests
 	grunt.registerTask( 'test', [ 'jshint', 'qunit' ] );
+	grunt.registerTask('html', ['mustacheGenerate']);
 
 };
