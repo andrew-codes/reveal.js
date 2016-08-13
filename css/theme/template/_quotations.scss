@@ -1,0 +1,25 @@
+.reveal {
+    blockquote {
+        padding: 2rem;
+
+        p {
+            font-size: 125%;
+            margin: 0;
+            padding: 4rem;
+            text-align: left;
+            text-indent: -4rem;
+        }
+    }
+
+    cite {
+        display: block;
+        font-style: normal;
+        margin-top: 0.5rem;
+        text-align: right;
+
+        &:before {
+            content: '-';
+            margin-right: 0.5rem;
+        }
+    }
+}
