@@ -5,6 +5,7 @@ tmp/**
 node_modules/
 .sass-cache
 css/reveal.min.css
-css/*.css
+css/reveal.css
+css/theme/*.css
 js/reveal.min.js
 /index.html
