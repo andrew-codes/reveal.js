@@ -1,15 +1,15 @@
 {
-  "author": "Andrew Smith",
-  "title": "",
-  "description": "",
-  "twitter": {
-	"username": "@andrew_codes"
-  },
-  "slides": [
-	"test"
-  ],
-  "theme": {
-	"main": "black",
-	"syntax": "github-gist"
-  }
+    "author": "Andrew Smith",
+    "title": "",
+    "description": "",
+    "twitter": {
+        "username": "@andrew_codes"
+    },
+    "slides": [
+        "test"
+    ],
+    "theme": {
+        "main": "black",
+        "syntax": "github-gist"
+    }
 }
