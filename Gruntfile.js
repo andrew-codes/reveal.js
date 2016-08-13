@@ -132,7 +132,7 @@ module.exports = function (grunt) {
 				tasks: 'html'
 			},
 			markdown: {
-				files: ['./slides/*.md']
+				files: ['./slides/**/*.html']
 			},
 			slides: {
 				files: ['./presentation.json'],
